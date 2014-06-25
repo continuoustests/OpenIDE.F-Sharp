@@ -1,0 +1,11 @@
+{
+    "link": {
+        "#Comment": "The preparer can only be a relative path to -files dir",
+        "preparer": "build.exe {{name}}.exe {{name}}.fsx",
+        
+        "executable": "{{name}}-files/{{name}}.exe",
+        "params": "{event} {global-profile} {local-profile}",
+        "#Comment": "Valid: {event} {global-profile} {local-profile}",
+        "#Comment": "Paths uses / on all platforms"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "#Comment": "Handlers are command arguments and stdout writelines",
+    "link": {
+        "#Comment": "The preparer can only be a relative path to -files dir",
+        "preparer": "build.exe {{name}}.exe {{name}}.fsx",
+
+        "executable": "{{name}}-files/{{name}}.exe",
+        "params": "{run-location} {global-profile} {local-profile} {args}",
+        "#Comment": "Valid: {run-location} {global-profile} {local-profile} {args}",
+        "#Comment": "Paths uses / on all platforms"
+    }
+}

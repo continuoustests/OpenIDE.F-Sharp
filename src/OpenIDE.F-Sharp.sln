@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "OpenIDE.F-Sharp", "OpenIDE.F-Sharp\OpenIDE.F-Sharp.fsproj", "{3302AB3C-93FD-42B5-9317-0F42A8DA4708}"
+EndProject
+Project("{4925A630-B079-445d-BCD4-3A9C94FE9307}") = "OpenIDE.FSharp.ScriptBuildTool", "OpenIDE.FSharp.ScriptBuildTool\OpenIDE.FSharp.ScriptBuildTool.fsproj", "{2C58C482-C51A-43D9-B1E0-68993E10EC23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C58C482-C51A-43D9-B1E0-68993E10EC23}.Debug|x86.ActiveCfg = Debug|x86
+		{2C58C482-C51A-43D9-B1E0-68993E10EC23}.Debug|x86.Build.0 = Debug|x86
+		{2C58C482-C51A-43D9-B1E0-68993E10EC23}.Release|x86.ActiveCfg = Release|x86
+		{2C58C482-C51A-43D9-B1E0-68993E10EC23}.Release|x86.Build.0 = Release|x86
+		{3302AB3C-93FD-42B5-9317-0F42A8DA4708}.Debug|x86.ActiveCfg = Debug|x86
+		{3302AB3C-93FD-42B5-9317-0F42A8DA4708}.Debug|x86.Build.0 = Debug|x86
+		{3302AB3C-93FD-42B5-9317-0F42A8DA4708}.Release|x86.ActiveCfg = Release|x86
+		{3302AB3C-93FD-42B5-9317-0F42A8DA4708}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = OpenIDE.F-Sharp\OpenIDE.F-Sharp.fsproj
+	EndGlobalSection
+EndGlobal

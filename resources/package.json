@@ -1,0 +1,17 @@
+{
+	"#Comment": "# is used here to comment out optional fields",
+	"#Comment": "pre and post install actions accepts only OpenIDE non edior commands",
+	"os": ["linux","windows","osx"],
+	"target": "language",
+	"id": "F-Sharp",
+	"version": "v0.1",
+	"command": "f#",
+	"name": "F# language plugin",
+	"description": "F# language plugin",
+	"#config-prefix": "f#.",
+	"#pre-install-actions": [],
+	"#post-install-actions": [],
+	"#dependencies": [
+			{"id": "id", "version": "v1.0"}
+		]
+}
