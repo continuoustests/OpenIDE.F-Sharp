@@ -22,6 +22,7 @@ mkdir $DEPLOYDIR
 mkdir $DEPLOYDIR/f#-files
 mkdir $DEPLOYDIR/f#-files/preserved-data
 mkdir $DEPLOYDIR/f#-files/preserved-data/create
+mkdir $DEPLOYDIR/f#-files/preserved-data/new
 mkdir $DEPLOYDIR/f#-files/preserved-data/script-template
 mkdir $DEPLOYDIR/f#-files/preserved-data/rscript-template
 mkdir $DEPLOYDIR/f#-files/bin
@@ -42,6 +43,7 @@ cp -r $ROOT/resources/templates/rscript/* $DEPLOYDIR/f#-files/preserved-data/rsc
 cp $BINARYDIR/build.exe $DEPLOYDIR/f#-files/preserved-data/rscript-template
 
 cp -r $ROOT/resources/create/* $DEPLOYDIR/f#-files/preserved-data/create
+cp -r $ROOT/resources/new/* $DEPLOYDIR/f#-files/preserved-data/new
 
 cp $ROOT/resources/initialize.sh $DEPLOYDIR/f#-files
 cp $ROOT/resources/initialize.bat $DEPLOYDIR/f#-files

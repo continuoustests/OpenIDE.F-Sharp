@@ -9,6 +9,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>{{project-name}}</RootNamespace>
     <AssemblyName>{{project-name}}</AssemblyName>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>

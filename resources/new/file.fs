@@ -1,0 +1,4 @@
+module {{namespace}}
+
+open System
+

@@ -9,6 +9,8 @@ type Command =
     | NewScript of string[]
     | NewRScript of string[]
     | Create of string[]
+    | New of string[]
+    | Delete of string
     | None
 
 let commandStringToArguments (cmd: string) =
@@ -73,8 +75,16 @@ end
 end
 create|\"Creates a new F# project\"
 {create-commands}
+end 
+new|\"New templated file\"
+{new-commands}
+end
+deletefile|\"Delete file from disk\" 
+    PATH|\"Path to file to delete\" end 
 end "
-    definitions.Replace("{create-commands}", OpenIDE.FSharp.Projects.generateCreateDefinitions())
+    definitions
+        .Replace("{create-commands}", OpenIDE.FSharp.Projects.generateCreateDefinitions())
+        .Replace("{new-commands}", OpenIDE.FSharp.Projects.generateNewDefinitions())
 
 let hasMore (a: string[], length, items: string[]) =
     let itemLength = items |> Array.length
@@ -99,6 +109,8 @@ let getCommand arguments =
      | (a) when hasMore(a, 3, [|"script"; "new"; "fsharp";|]) -> a.[3..] |> NewScript
      | (a) when hasMore(a, 3, [|"rscript"; "new"; "fsharp";|]) -> a.[3..] |> NewRScript
      | (a) when hasMore(a, 2, [|"create"|]) -> a.[1..] |> Create
+     | (a) when hasMore(a, 2, [|"new"|]) -> a.[1..] |> New
+     | (a) when hasMore(a, 1, [|"deletefile"|]) -> a.[1] |> Delete
      | _ -> None
 
 let runCommand cmd =
@@ -109,6 +121,8 @@ let runCommand cmd =
      | NewScript(args) -> OpenIDE.FSharp.Scripts.newScript args
      | NewRScript(args) -> OpenIDE.FSharp.Scripts.newRScript args
      | Create(args) -> OpenIDE.FSharp.Projects.newProject args
+     | New(args) -> OpenIDE.FSharp.Projects.newFile args
+     | Delete(file) -> OpenIDE.FSharp.Projects.deleteFile file
      | None -> ()
 
 let initializedHandler path =

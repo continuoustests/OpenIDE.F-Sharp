@@ -1,6 +1,0 @@
-{
-    "link": {
-        "executable": "f#-files/f#.exe",
-        "params": "{args}",
-    }
-}

@@ -18,6 +18,7 @@ mkdir %DEPLOYDIR%
 mkdir %DEPLOYDIR%\f#-files
 mkdir %DEPLOYDIR%\f#-files\preserved-data
 mkdir %DEPLOYDIR%\f#-files\preserved-data\create
+mkdir %DEPLOYDIR%\f#-files\preserved-data\new
 mkdir %DEPLOYDIR%\f#-files\preserved-data\script-template
 mkdir %DEPLOYDIR%\f#-files\preserved-data\rscript-template
 mkdir %DEPLOYDIR%\f#-files\bin
@@ -35,6 +36,7 @@ xcopy /S /I /E %ROOT%\resources\templates\rscript %DEPLOYDIR%\f#-files\preserved
 copy %BINARYDIR%\build.exe %DEPLOYDIR%\f#-files\preserved-data\rscript-template
 
 xcopy /S /I /E %ROOT%\resources\create %DEPLOYDIR%\f#-files\preserved-data\create
+xcopy /S /I /E %ROOT%\resources\new %DEPLOYDIR%\f#-files\preserved-data\new
 
 copy %ROOT%\resources\initialize.bat %DEPLOYDIR%\f#-files
 copy %ROOT%\resources\initialize.sh %DEPLOYDIR%\f#-files
